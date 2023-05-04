@@ -44,7 +44,10 @@ public:
     HugeInt& operator^=(const HugeInt& other); // Power Of operator
     HugeInt& operator%=(const HugeInt& other); // Modulus With operator
     friend std::ostream& operator<<(std::ostream& os, const HugeInt& hugeint); // Output stream operator
+    HugeInt absVal() const;
+    HugeInt shiftLeft(int bits);
 private:
+
     void trim(); // Remove leading zeroes from the internal digits vector
 };
 
